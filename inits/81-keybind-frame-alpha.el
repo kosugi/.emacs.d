@@ -1,0 +1,10 @@
+(defun frame-alpha-offset (d)
+  (let* ((a (frame-parameter nil 'alpha))
+         (b (+ d (if (integerp a) a 100)))
+         (c (cond ((< b 20) 20)
+                  ((> b 100) 100)
+                  (t b))))
+    (set-frame-parameter nil 'alpha c)))
+
+(global-set-key (kbd "M-_") (lambda () (interactive) (frame-alpha-offset -5)))
+(global-set-key (kbd "M-+") (lambda () (interactive) (frame-alpha-offset +5)))

@@ -1,0 +1,4 @@
+*.elc
+/elisp/elpa
+/elisp/el-get
+/var
