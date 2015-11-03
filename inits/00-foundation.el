@@ -16,6 +16,7 @@
 (setq-default truncate-lines t)
 (setq default-major-mode 'text-mode)
 (setq-default indent-tabs-mode nil)
+(setq default-major-mode 'text-mode)
 
 ;;
 ;; 現在行をハイライトする
